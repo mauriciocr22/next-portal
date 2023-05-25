@@ -1,20 +1,25 @@
+import { Input } from "@/components/Input";
+import { Mail, Lock, UserCircle } from "lucide-react";
+
 export default function Login() {
   return (
     <div className="flex h-full w-full items-center justify-center">
-      <div className="flex min-w-[400px] bg-white p-8">
+      <div className="flex min-w-[400px] rounded-[6px] bg-white p-8 shadow-md">
         <form className="flex w-full flex-col items-center">
-          <h1 className="mb-8 w-full text-center text-5xl font-normal">
-            Login
+          <h1 className="mb-8">
+            <UserCircle size={108} className="text-[#888]" />
           </h1>
-          <input
+          <Input
             type="email"
-            placeholder="Email"
-            className="mb-2 w-full p-2 text-lg"
+            label="Email"
+            icon={<Mail className="text-[#aaa]" />}
+            required
           />
-          <input
+          <Input
             type="password"
-            placeholder="Password"
-            className="w-full p-2 text-lg"
+            label="Password"
+            icon={<Lock className="text-[#aaa]" />}
+            required
           />
           <div className="mb-3 mt-8 flex w-full flex-row justify-between">
             <div>
