@@ -1,5 +1,6 @@
 import { Input } from "@/components/Input";
 import { Mail, Lock, UserCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -45,9 +46,12 @@ export default function Login() {
           </button>
           <span>
             Do not have an account?{" "}
-            <a className="text-[#4E4E4E] hover:text-black" href="#">
+            <Link
+              className="text-[#4E4E4E] hover:text-black"
+              href="/create-account"
+            >
               Sign up
-            </a>
+            </Link>
           </span>
         </form>
       </div>
