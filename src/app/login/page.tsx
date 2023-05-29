@@ -1,15 +1,13 @@
 import { Input } from "@/components/Input";
-import { Mail, Lock, UserCircle } from "lucide-react";
+import { Mail, Lock } from "lucide-react";
 import Link from "next/link";
 
 export default function Login() {
   return (
     <div className="flex h-full w-full items-center justify-center">
-      <div className="flex min-w-[400px] rounded-[6px] bg-white p-8 shadow-md">
+      <div className="flex min-w-[400px] rounded-[6px] p-8">
         <form className="flex w-full flex-col items-center">
-          <h1 className="mb-8">
-            <UserCircle size={108} className="text-[#888]" />
-          </h1>
+          <h1 className="mb-8 text-4xl lg:text-5xl"> Login</h1>
           <Input
             type="email"
             label="Email"
@@ -46,10 +44,7 @@ export default function Login() {
           </button>
           <span>
             Do not have an account?{" "}
-            <Link
-              className="text-[#4E4E4E] hover:text-black"
-              href="/create-account"
-            >
+            <Link className="text-[#4E4E4E] hover:text-black" href="/signup">
               Sign up
             </Link>
           </span>
